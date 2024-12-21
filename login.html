@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Made by Me</title>
+    <link rel="stylesheet" href="code.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<header>
+    <nav>
+        <div class="nav-container">
+          <a href="#" class="logo">Mindful Space</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="#chatbot">Chatbot</a></li>
+                <li><a href="#login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<body>
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.signup_main, .signin_main {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup_title, .signin_title {
+    text-align: center;
+    color: #333;
+}
+
+.form-input {
+    margin-bottom: 15px;
+}
+
+.form-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.switch-betw-pages_login, .switch-betw-pages_signup {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dashboard-container {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.dashboard-header h1 {
+    color: #333;
+}
+
+.dashboard-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+    </style>
+    <!-- Sign Up Section -->
+    <div id="signup_main" class="signup_main">
+        <h1 class="signup_title">Sign Up</h1>
+        <form class="form-signup">
+            <!-- Name Field -->
+            <div class="form-input">
+                <i class="fa-solid fa-user"></i>
+                <label for="signup-name">Name</label>
+                <input type="text" id="signup-name" placeholder="Name" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-input">
+                <i class="fa-solid fa-envelope"></i>
+                <label for="signup-email">E-mail</label>
+                <input type="email" id="signup-email" placeholder="Email" required>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-input">
+                <i class="fa-solid fa-key"></i>
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" placeholder="Password" required>
+            </div>
+            
+            <button type="submit" id="signup_saved_to_local">Sign Up</button>
+        </form>
+        <!-- Switch between pages -->
+        <div class="switch-betw-pages_login">
+            Already have an account? <a onclick="showSignin()">Login</a>
+        </div>
+    </div>
+
+    <!-- Sign In Section -->
+    <div id="signin_main" class="signin_main" style="display: none;">
+        <h1 class="signin_title">Sign in</h1>
+        <form class="form-signin">
+            <!-- Email Field -->
+            <div class="form-input">
+                <i class="fa-solid fa-envelope"></i>
+                <label for="signin-email">E-mail</label>
+                <input type="email" id="signin-email" placeholder="Email" required>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-input">
+                <i class="fa-solid fa-key"></i>
+                <label for="signin-password">Password</label>
+                <input type="password" id="signin-password" placeholder="Password" required>
+            </div>
+        </form>
+        <!-- Switch between pages -->
+        <div class="switch-betw-pages_signup">
+            Already a user? <a onclick="showSignup()">Sign up</a>
+        </div>
+        <button type="submit" id="login-btn">Login</button>
+    </div>
+
+    <script src="./login_script.js"></script>
+</body>
+</html>

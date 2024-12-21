@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Space</title>
+    <link rel="stylesheet" href="code.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+              <a href="#" class="logo">Mindful Space</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="#chatbot">Chatbot</a></li>
+                    <li><a href="login.html">Login</a></li>
+              
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Find Your Calm, Track Your Mood.</h1>
+                <p>A safe space for mental wellbeing.</p>
+            </div>
+        </section>
+        <section id="mood-tracker">
+            <h2>Mood Tracker</h2>
+            <div class="mood-input">
+                <label for="mood-rating">How are you feeling today?</label>
+                <input type="range" id="mood-rating" min="1" max="5" step="1" value="3">
+                <p><span id="mood-rating-text">Neutral</span></p>
+                <button id="mood-submit" type="button">Log Mood</button>
+            </div>
+            <div id="mood-history">
+                <h3>Mood History</h3>
+                <ul id="mood-list"></ul>
+            </div>
+        </section>
+
+        <section id="chatbot">
+            <h2>Mental Health Support Chatbot</h2>
+              <div class="chat-container">
+                <div id="messages"></div>
+                  <div class="chat-input">
+                    <input type="text" id="user-input" placeholder="Type a message...">
+                    <button id="send-btn">Send</button>
+                 </div>
+              </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Mindful Space</p>
+    </footer>
+    <script src="code.js"></script>
+</body>
+</html>
